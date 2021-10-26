@@ -10,7 +10,6 @@ Commit Date: 26th October 2021
 The HTML file has 3 `div` elements which correspond with the second, minute, and
     hour hand on a clock
 
-```html
 <!-- elements -->
     <div class="hand hour-hand"></div>
     <div class="hand min-hand"></div>
@@ -18,13 +17,12 @@ The HTML file has 3 `div` elements which correspond with the second, minute, and
 <!-- elements -->
 
 
-guide  https://github.com/nitishdayal/JavaScript30 -->
-
-## Approach:
+## Approach
 
 Update the CSS and create a function in Javascript using the classes to get the clock hands to rotate from a central pivot, 
 depending in keeping with computer time (?).
  
 
 
+<!-- guide  https://github.com/nitishdayal/JavaScript30 -->
 
