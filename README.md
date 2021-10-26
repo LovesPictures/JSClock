@@ -11,37 +11,19 @@ The HTML file has 3 `div` elements which correspond with the second, minute, and
     hour hand on a clock
 
 ```html
-<!-- ...previous elements -->
+<!-- elements -->
     <div class="hand hour-hand"></div>
     <div class="hand min-hand"></div>
     <div class="hand second-hand"></div>
-<!-- next elements... -->
-```
-
-The necessary JavaScript code shouldn't be too crazy;
-    we'll create references to these elements and dynamically
-    update certain CSS properties to change their positions so they reflect the
-    current time. Easy peasy.
-
-<!-- 
-
-guide  https://github.com/nitishdayal/JavaScript30
-
-**Steps:**
-
-- **CSS**:
-
-    1. The hands are all laying flat; we need them to be vertical. Rotate all of the
-        hands by 90 degrees so that they are upright by giving the `.hand` class a
-        `transform` rule with the value `rotate(90deg)`.
+<!-- elements -->
 
 
-- **JavaScript**:
+guide  https://github.com/nitishdayal/JavaScript30 -->
 
-    1. Declare & define variables for each clock hand and reference the corresponding _HTML
-        element_.
+**approach:**
+
+Update the CSS and create a function in Javascript using the classes to get the clock hands to rotate from a central pivot, depending in keeping with computer time (?).
  
 
 
 
--->
