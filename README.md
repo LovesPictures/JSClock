@@ -25,6 +25,7 @@ The necessary JavaScript code shouldn't be too crazy;
 
 <!-- 
 
+guide  https://github.com/nitishdayal/JavaScript30
 
 **Steps:**
 
