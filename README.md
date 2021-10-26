@@ -20,9 +20,10 @@ The HTML file has 3 `div` elements which correspond with the second, minute, and
 
 guide  https://github.com/nitishdayal/JavaScript30 -->
 
-**approach:**
+## Approach:
 
-Update the CSS and create a function in Javascript using the classes to get the clock hands to rotate from a central pivot, depending in keeping with computer time (?).
+Update the CSS and create a function in Javascript using the classes to get the clock hands to rotate from a central pivot, 
+depending in keeping with computer time (?).
  
 
 
