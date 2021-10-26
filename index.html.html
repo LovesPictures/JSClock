@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+</head>
+<body>
+
+
+<!-- HTML -->
+    <div class="clock">
+      <div class="clock-face">
+        <!-- separate div for each hand -->
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+<!-- CSS -->
+
+
+
+  <style>
+
+/* new */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* body {
+  margin:0;
+  height:100vh;
+  background: 
+  radial-gradient(circle closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 50%), 
+  url("https://globalgamejam.org/sites/default/files/field_news_story_image_video/ticking-clocks.jpg") center/cover;
+} */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  
+  /* https://angrytools.com/gradient/ */
+  /* global 92%+ browsers support */
+     background:radial-gradient(circle at 50% 50%, rgba(0, 0, 180, 0.91) 0%, rgba(238, 130, 238, 0.47) 100%),
+    url("https://globalgamejam.org/sites/default/files/field_news_story_image_video/ticking-clocks.jpg") center/cover;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 10px;
+}
+
+/* end */
+
+
+    /* html {
+      background: #018DED url(https://media.istockphoto.com/photos/time-concept-bunch-of-watches-3d-render-picture-id1145171942?b=1&k=20&m=1145171942&s=170667a&w=0&h=9U1FR5XhLYzvHa93LJt04b5P4-05Y1EiWeoBd2zq9WQ=);
+      background-size: cover;
+      font-family: 'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    } */
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 40rem;
+      height: 40rem;
+      border: 20px  solid double rgb(225, 6, 245);
+      border-radius: 80%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 40px rgba(174, 12, 214, 0.1),
+        inset 0 0 0 10px #c8dff5,
+        inset 0 0 10px rgb(221, 9, 193),
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width: 50%;
+      height: 10px; /*tickeness of the hands*/
+      background: #c8dff5;
+      position: absolute;
+      top: 50%;
+      stroke-linecap: round;
+      /* reposition pivot points of the hands */
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0, 0.56);
+
+    }
+
+  </style>
+
+<script>
+// start with the second hand as this update more frequentlty
+// creating individual fuctions
+  const secondHand = document.querySelector('.second-hand');
+  const minsHand = document.querySelector('.min-hand');
+  const hourHand = document.querySelector('.hour-hand');
+
+      // Add a function to use the second hand function
+  function setDate() {      
+      const now = new Date();
+ 
+      const seconds = now.getSeconds(); // get seconds
+      const secondsDegrees = ((seconds / 60) * 360) + 90; //turn the seconds into degrees of turning and offset the original 90 deg rotate
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`; //styling ?? 
+      
+      const mins = now.getMinutes(); //get mins
+      const minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90; // see note above. 
+      minsHand.style.transform = `rotate(${minsDegrees}deg)`; //styling ?? 
+ 
+      // new 
+      const hour = now.getHours(); // get hours 
+      const hourDegrees = ((hour /12 ) *360) + ((mins/60)*30)+90; // divide by number of hours + note above.
+      hourHand.style.transform = `rotate(${hourDegrees}deg)`; //styling ??
+}
+  // set intervals of 1 second
+  setInterval(setDate, 1000);
+
+  setDate();
+
+
+</script>
+</body>
+</html>
