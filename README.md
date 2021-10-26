@@ -22,7 +22,6 @@ The HTML file has 3 `div` elements which correspond with the second, minute, and
 Update the CSS and create a function in Javascript using the classes to get the clock hands to rotate from a central pivot, 
 depending in keeping with computer time (?).
  
-
-
-<!-- guide  https://github.com/nitishdayal/JavaScript30 -->
+## Useful links
+* [Digital clock](https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock) 
 
