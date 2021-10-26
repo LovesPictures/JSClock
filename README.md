@@ -1,5 +1,5 @@
 ##
-# Exercise 2: Clock - JS/CSS 
+# Project 2: Clock - JS/CSS 
 Clock made with vanilla JavaScript
 
 Judith Ricketts, Artist, Lecturer and Software engineer - [Contact](https://lovespictures.com/)  
