@@ -24,4 +24,6 @@ depending in keeping with computer time (?).
  
 ## Useful links
 * [Digital clock](https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock) 
+* [Gradient Generator with alpha](https://angrytools.com/gradient/) 
+
 
