@@ -1,6 +1,6 @@
 ##
 # Project 2: Clock - JS/CSS 
-Clock made with vanilla JavaScript
+Made with vanilla JavaScript
 
 Judith Ricketts, Artist, Lecturer and Software engineer - [Contact](https://lovespictures.com/)  
 Commit Date: 26th October 2021
